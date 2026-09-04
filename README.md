@@ -1,143 +1,112 @@
 # Anmol Singh — Portfolio
 
-A premium developer portfolio built with React, Vite, Tailwind CSS and Framer
-Motion — built from your resume content (MedScan AI, PlantDx, Thapar Institute,
-skills, and your real GitHub/LinkedIn/LeetCode links) — plus a small Express +
-MongoDB backend that stores contact form messages and a private `/admin` page
-to read them.
+My personal developer portfolio showcasing my journey, skills, projects, and experience in software development and AI/ML.
 
-## Two parts, two servers
+## About
 
-```
-anmol-portfolio/        ← the React site (Vite dev server, port 5173)
-anmol-portfolio/server/ ← the API (Express, port 4000)
-```
+I am a Computer Engineering student at Thapar Institute of Engineering and Technology with a focus on:
 
-Both need to be running for the contact form and admin page to work.
+- Full-Stack Development
+- AI / Machine Learning
+- Deep Learning
+- Computer Vision
+- Problem Solving & DSA
 
-## 1. Start the backend
+This portfolio brings together my technical work, projects, development experience, and learning journey in one place.
 
-```bash
-cd server
-npm install
-npm run dev
-```
+## Tech Stack
 
-This connects to the MongoDB Atlas cluster you gave me, using the connection
-string already saved in `server/.env`. You should see:
+### Frontend
+- React.js
+- JavaScript
+- Tailwind CSS
+- Framer Motion
 
-```
-[db] Connected to MongoDB Atlas
-[server] listening on http://localhost:4000
-```
+### Backend
+- Node.js
+- Express.js
+- FastAPI
+- REST APIs
 
-**Before you deploy this anywhere public:** the database password was shared
-in plain text in our conversation, so I'd treat it as already exposed —
-rotate it from the MongoDB Atlas dashboard (Database Access → edit user →
-new password), then update `MONGODB_URI` in `server/.env` to match. Never
-commit `server/.env` to a public GitHub repo — it's already in
-`server/.gitignore`.
+### AI / ML
+- Python
+- PyTorch
+- TensorFlow
+- CNNs
+- Transformers
+- Computer Vision
 
-## 2. Start the frontend
+### Databases & Cloud
+- MongoDB
+- MySQL
+- MongoDB Atlas
+- Cloudinary
+- Hugging Face
 
-In a separate terminal, from the project root:
+### Tools
+- Git
+- GitHub
+- Postman
+- CI/CD
 
-```bash
-npm install
-npm run dev
-```
+## Featured Projects
 
-Then open the local URL Vite prints (usually `http://localhost:5173`).
+### MedScan AI
+A full-stack medical imaging diagnosis platform integrating multiple CNN-based models for analyzing MRI, X-ray, and CT scans.
 
-## Build for production
+**Focus:** Full-Stack Development · CNNs · Deep Learning · Medical Imaging
 
-```bash
-npm run build
-npm run preview   # optional, preview the production build locally
-```
+### PlantDx
+A full-stack plant leaf disease classification platform integrating transformer-based computer vision models across multiple fruit plant categories.
 
-The build output goes to `dist/` — deploy that folder to Vercel, Netlify, GitHub
-Pages, or any static host.
+**Focus:** Full-Stack Development · Transformers · Computer Vision · Image Classification
 
-## Editing your content
+## Portfolio Sections
 
-Everything you'll want to change day to day lives in `src/data/`, not inside
-components:
+- **About** — Background, interests, and technical focus
+- **Skills** — Technologies and tools I work with
+- **Projects** — Selected full-stack and AI/ML projects
+- **Experience** — Academic and professional journey
+- **Problem Solving** — DSA and competitive programming practice
+- **Contact** — Ways to connect with me
 
-- `src/data/social.js` — email, GitHub, LinkedIn, LeetCode, resume path
-- `src/data/projects.js` — add/edit projects (each one gets its own detail page
-  automatically at `/projects/<slug>`)
-- `src/data/skills.js` — the skills grid, grouped by category
-- `src/data/experience.js` — the Experience & Education timeline
+## Problem Solving
 
-## Resume file
+I regularly practice Data Structures and Algorithms to strengthen my problem-solving and algorithmic thinking.
 
-Your real resume PDF is already placed at `public/resume.pdf` and wired up to
-every "Download Resume" button. Swap that file whenever you update your resume
-— no code changes needed.
+**200+ problems solved on LeetCode.**
 
-## The admin page
+Topics include:
 
-There is no button or nav link to it anywhere in the UI, on purpose. Go to it
-directly:
+`Arrays` · `Strings` · `Linked Lists` · `Trees` · `Stacks & Queues` · `Dynamic Programming` · `Divide & Conquer` · `Two Pointers` · `Hash Tables` · `Matrices` · `Sorting` · `and more`
 
-```
-http://localhost:5173/admin
-```
+## Development Philosophy
 
-Sign in with:
+I enjoy taking ideas from concept to working products — from building and fine-tuning AI models to integrating them into practical full-stack applications.
 
-- **ID:** `Anmol-Singh-Chehal`
-- **Password:** the one you gave me
+My focus is on building solutions that are:
 
-The password is never stored in plain text — the backend only keeps a salted
-hash (`server/.env` → `ADMIN_PASSWORD_HASH` / `ADMIN_PASSWORD_SALT`), and
-compares against that at login. To change the password later:
+- Practical
+- Efficient
+- Scalable
+- User-focused
 
-```bash
-cd server
-node scripts/hash-password.js "your-new-password"
-```
+## Built With
 
-Paste the two printed lines into `server/.env`, restart the backend, and the
-old password stops working immediately.
+This portfolio is built using:
 
-Once signed in you land on `/admin/dashboard`, which has:
+- React.js
+- Vite
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
-- A search bar (matches name, email, or message text)
-- Filters for read/unread and a date range
-- Sort by newest or oldest
-- Mark-as-read/unread and delete on each message
+## Connect
 
-The session token lives in `sessionStorage` (not `localStorage`), so signing
-out of the browser tab or closing it ends the admin session automatically.
+- GitHub: [Anmol-Singh-Chehal](https://github.com/Anmol-Singh-Chehal)
+- LinkedIn: [Anmol Singh](https://www.linkedin.com/in/anmol-singh-296420321/)
+- LeetCode: [anmol-singh-chehal](https://leetcode.com/u/anmol-singh-chehal/)
 
-## Connecting elsewhere later
+---
 
-- `src/services/api.js` — generic request helper, point `VITE_API_BASE_URL`
-  (in the root `.env`) at wherever you deploy the backend
-- `src/services/contact.js` — now posts to the real `/api/contact` endpoint
-- `src/services/admin.js` — login, search/filter messages, mark read, delete
-- `src/services/github.js` — calls the public GitHub API directly (no key
-  needed); swap for your own backend if you want authenticated stats
-
-## Deploying
-
-- **Frontend:** any static host (Vercel, Netlify, GitHub Pages). Set
-  `VITE_API_BASE_URL` to your deployed backend's URL before building.
-- **Backend:** any Node host (Render, Railway, Fly.io, a VPS). Set the same
-  environment variables from `server/.env` in that host's dashboard — don't
-  upload `.env` itself. Update `CORS_ORIGIN` to your deployed frontend URL so
-  the browser is allowed to call the API.
-
-## Notes
-
-- Theme (light/dark) persists in `localStorage` and respects system preference
-  on first visit.
-- The GitHub repo count on the "Beyond the resume" section fetches live from
-  the public GitHub API in the browser — if that request fails (e.g. rate
-  limiting or no network), it falls back to a "View repositories on GitHub"
-  link instead of showing broken data.
-- The hero visual is a hand-illustrated avatar (SVG, not a photo or AI
-  generation) with a simple floating animation — this environment doesn't
-  have an image-generation tool available.
+**Designed & developed by Anmol Singh**
