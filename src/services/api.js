@@ -1,7 +1,7 @@
 // Central place the whole app talks to the backend through — set
-// VITE_API_BASE_URL in .env to point at a different deployment.
+// API_BASE_URL in .env to point at a different deployment.
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:4000'
+const BASE_URL = import.meta.env.API_BASE_URL || 'http://localhost:4000'
 
 export async function apiRequest(path, options = {}) {
   const response = await fetch(`${BASE_URL}${path}`, {
