@@ -20,10 +20,15 @@ export const skillGroups = [
     label: 'AI / Machine Learning',
     items: ['PyTorch', 'TensorFlow', 'timm', 'CNNs', 'Transformers'],
   },
-  {
+    {
     id: 'data',
-    label: 'Databases & Cloud',
-    items: ['MongoDB', 'MongoDB Atlas', 'MySQL', 'Cloudinary'],
+    label: 'Data, Models & Cloud',
+    items: [
+      'MySQL',
+      'MongoDB Atlas',
+      'Cloudinary',
+      'Hugging Face',
+    ],
   },
   {
     id: 'tools',

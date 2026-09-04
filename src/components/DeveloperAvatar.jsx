@@ -1,10 +1,12 @@
 import { motion } from 'framer-motion'
-import portrait from '../assets/anmol-portrait.jpg'
+// import portrait from '../assets/anmol-portrait.jpg'
+import portrait from '../assets/anime-style.png'
 
 const chips = [
-  { label: 'React', x: '-6%', y: '14%', delay: 1.0 },
-  { label: 'PyTorch', x: '78%', y: '8%', delay: 1.15 },
-  { label: 'OpenCV', x: '80%', y: '80%', delay: 1.3 },
+  { label: 'MERN', x: '-6%', y: '14%', delay: 1.0 },
+  { label: 'AI/ML/DL', x: '78%', y: '8%', delay: 1.15 },
+  { label: 'CI/CD', x: '80%', y: '80%', delay: 1.3 },
+  { label: 'FastAPI', x: '0%', y: '80%', delay: 1.3 },
 ]
 
 export default function DeveloperAvatar() {

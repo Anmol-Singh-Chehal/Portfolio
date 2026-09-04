@@ -8,7 +8,7 @@ export default function Experience() {
         <div className="max-w-lg mb-14">
           <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">Experience &amp; education</h2>
           <p className="text-[var(--muted)] leading-relaxed">
-            Where I&apos;ve been building — new entries will land here as they happen.
+            A timeline of my academic journey, technical growth, and development experience.
           </p>
         </div>
 

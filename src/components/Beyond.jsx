@@ -30,7 +30,7 @@ export default function Beyond() {
         <div className="max-w-lg mb-12">
           <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4">Beyond the resume</h2>
           <p className="text-[var(--muted)] leading-relaxed">
-            Where the day-to-day practice happens — repositories and problem-solving.
+            A collection of my coding practice, problem-solving journey, and development work.
           </p>
         </div>
 

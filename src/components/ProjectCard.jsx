@@ -43,7 +43,7 @@ export default function ProjectCard({ project, index }) {
         <p className="text-sm text-[var(--muted)] leading-relaxed mb-4">{project.tagline}</p>
 
         <div className="flex flex-wrap gap-1.5 mb-5">
-          {project.technologies.slice(0, 4).map((tech) => (
+          {project.technologies.map((tech) => (
             <span key={tech} className="text-xs font-mono px-2 py-1 rounded-md border border-[var(--border)] text-[var(--muted)]">
               {tech}
             </span>

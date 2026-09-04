@@ -39,8 +39,7 @@ export default function Hero() {
           </motion.h1>
 
           <motion.p variants={item} className="text-[var(--muted)] text-lg leading-relaxed max-w-lg mb-9">
-            I build scalable web applications and intelligent computer vision systems
-            that turn raw scans and images into readable, trustworthy predictions.
+            I engineer efficient AI models and end-to-end full-stack applications, turning deep learning research into accurate, practical solutions for real-world problems.
           </motion.p>
 
           <motion.div variants={item} className="flex flex-wrap items-center gap-4 mb-10">
